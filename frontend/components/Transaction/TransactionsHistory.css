@@ -1,0 +1,165 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    padding: 0;
+}
+
+.transactions-container {
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    color: white;
+    width: 100vw;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.transactions-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.transactions-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.header-buttons button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+.transactions-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.filter-buttons button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.date-range {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.category-type-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.transactions-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    border-radius: 0;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.transactions-table th,
+.transactions-table td {
+    border: 1px solid #555;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.transactions-table th {
+    background-color: #333;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.transactions-table td {
+    color: white;
+}
+
+.no-results {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 16px;
+}
+
+.transactions-footer {
+    display: flex;
+    gap: 16px;
+}
+
+.transactions-footer button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transactions-footer button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
+}
