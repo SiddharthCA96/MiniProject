@@ -122,6 +122,15 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email'
 };
 
+exports.Prisma.TransactionsScalarFieldEnum = {
+  id: 'id',
+  type: 'type',
+  description: 'description',
+  category: 'category',
+  date: 'date',
+  amount: 'amount'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -131,10 +140,24 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
+exports.TransactionsType = exports.$Enums.TransactionsType = {
+  EXPENSE: 'EXPENSE',
+  INCOME: 'INCOME'
+};
 
+exports.TransactionsCategory = exports.$Enums.TransactionsCategory = {
+  FOOD: 'FOOD',
+  SALARY: 'SALARY',
+  TRANSPORT: 'TRANSPORT',
+  SHOPPING: 'SHOPPING',
+  ENTERTAINMENT: 'ENTERTAINMENT',
+  HEALTH: 'HEALTH',
+  OTHER: 'OTHER'
+};
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  User: 'User',
+  Transactions: 'Transactions'
 };
 
 /**

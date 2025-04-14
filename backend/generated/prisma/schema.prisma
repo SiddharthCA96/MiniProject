@@ -18,3 +18,27 @@ model User {
   id    Int    @id @default(autoincrement())
   email String @unique
 }
+
+model Transactions {
+  id          Int                  @id @default(autoincrement())
+  type        TransactionsType     @default(INCOME)
+  description String
+  category    TransactionsCategory @default(OTHER)
+  date        DateTime
+  amount      Int
+}
+
+enum TransactionsType {
+  EXPENSE
+  INCOME
+}
+
+enum TransactionsCategory {
+  FOOD
+  SALARY
+  TRANSPORT
+  SHOPPING
+  ENTERTAINMENT
+  HEALTH
+  OTHER
+}
