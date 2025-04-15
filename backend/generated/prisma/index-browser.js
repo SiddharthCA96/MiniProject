@@ -119,16 +119,25 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
-  email: 'email'
+  email: 'email',
+  name: 'name'
 };
 
 exports.Prisma.TransactionsScalarFieldEnum = {
   id: 'id',
   type: 'type',
   description: 'description',
-  category: 'category',
+  amount: 'amount',
   date: 'date',
-  amount: 'amount'
+  userId: 'userId',
+  categoryId: 'categoryId'
+};
+
+exports.Prisma.TransactionCategoryScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  userId: 'userId',
+  type: 'type'
 };
 
 exports.Prisma.SortOrder = {
@@ -140,24 +149,20 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
 exports.TransactionsType = exports.$Enums.TransactionsType = {
   EXPENSE: 'EXPENSE',
   INCOME: 'INCOME'
 };
 
-exports.TransactionsCategory = exports.$Enums.TransactionsCategory = {
-  FOOD: 'FOOD',
-  SALARY: 'SALARY',
-  TRANSPORT: 'TRANSPORT',
-  SHOPPING: 'SHOPPING',
-  ENTERTAINMENT: 'ENTERTAINMENT',
-  HEALTH: 'HEALTH',
-  OTHER: 'OTHER'
-};
-
 exports.Prisma.ModelName = {
   User: 'User',
-  Transactions: 'Transactions'
+  Transactions: 'Transactions',
+  TransactionCategory: 'TransactionCategory'
 };
 
 /**

@@ -15,17 +15,34 @@ datasource db {
 }
 
 model User {
-  id    Int    @id @default(autoincrement())
-  email String @unique
+  id                  Int                   @id @default(autoincrement())
+  email               String                @unique
+  name                String
+  transactions        Transactions[] //relation to transactions
+  transactionCategory TransactionCategory[] //relation to transaction category
 }
 
 model Transactions {
-  id          Int                  @id @default(autoincrement())
-  type        TransactionsType     @default(INCOME)
+  id          Int                 @id @default(autoincrement())
+  type        TransactionsType    @default(INCOME)
   description String
-  category    TransactionsCategory @default(OTHER)
-  date        DateTime
   amount      Int
+  date        DateTime
+  user        User                @relation(fields: [userId], references: [id])
+  userId      Int
+  category    TransactionCategory @relation(fields: [categoryId], references: [id])
+  categoryId  Int
+}
+
+model TransactionCategory {
+  id           Int              @id @default(autoincrement())
+  name         String
+  user         User?            @relation(fields: [userId], references: [id])
+  userId       Int?
+  transactions Transactions[]
+  type         TransactionsType
+
+  @@unique([userId, name], name: "userId_name") //to prevent dublicate category names per user
 }
 
 enum TransactionsType {
@@ -33,12 +50,5 @@ enum TransactionsType {
   INCOME
 }
 
-enum TransactionsCategory {
-  FOOD
-  SALARY
-  TRANSPORT
-  SHOPPING
-  ENTERTAINMENT
-  HEALTH
-  OTHER
-}
+//npx prisma migrate dev --name updated_schema
+//npx prisma generate

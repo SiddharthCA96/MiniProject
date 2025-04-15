@@ -1,10 +1,40 @@
 # Node modules
 node_modules/
 
-# Prisma environment
-.env
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables
+.env
+.env.*
+
+# Prisma generated files (if output dir is not needed in git)
+generated/
+prisma/generated/
 
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Optional: build artifacts
+dist/
+build/
+
+# Optional: Next.js or frontend static
+.next/
+out/
