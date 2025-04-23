@@ -1,6 +1,6 @@
 // require('dotenv').config();
 import express from "express";
-import transactionsRouter from './routes/transactions.js';
+import transactionsRouter from "../routes/transRoutes.js"
 
 import { PrismaClient } from '../generated/prisma/index.js';
 

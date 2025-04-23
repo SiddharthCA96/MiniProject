@@ -1,6 +1,6 @@
 import express from "express";
-import { PrismaClient, TransactionsType } from "@prisma/client";
-import { authenticateToken } from "../middleware/auth.js";
+import { PrismaClient } from '../generated/prisma/index.js';
+import { authenticateToken } from "../middlewares/auth.js";
 
 const router = express.Router();
 const prisma = new PrismaClient();
